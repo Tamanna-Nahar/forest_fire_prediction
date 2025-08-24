@@ -1,10 +1,6 @@
 # Forest Fire Risk Prediction
 
 A machine learning project that predicts forest fire risk levels (Low, Medium, High) using environmental and weather data from the UCI Forest Fires dataset.
-
-# Forest Fire Risk Prediction
-
-Predict forest fire risk levels (**Low / Medium / High**) using weather and drought data.  
 Built with **Python**, **Pandas**, **Scikit-learn**, and **Matplotlib**.
 
 ---
@@ -60,21 +56,6 @@ We use the **UCI Forest Fires dataset**, preprocess it, train a **Random Forest 
 - Confusion matrix heatmap  
 - Feature importance bar chart  
 
----
-
-## How to Run
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/forest-fire-prediction.git
-cd forest-fire-prediction
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the notebook
-jupyter notebook forest_fire_prediction.ipynb
-```
 
 ---
 
