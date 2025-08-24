@@ -7,9 +7,17 @@ A machine learning project that predicts forest fire risk levels (Low, Medium, H
 Forest fires are a major environmental concern, and early risk prediction can help prevent damage.
 This project uses a Random Forest Classifier to classify fire risk categories based on features like temperature, humidity, wind, and drought indices.
 
-Dataset
+📂 Dataset
 
-Source: UCI Machine Learning Repository – Forest Fires Dataset
+Source: UCI Machine Learning Repository
+Features:
+Weather: temperature, wind, humidity, rainfall
+
+Drought indices: DC, DMC, ISI, FFMC
+
+Temporal: month, day (one-hot encoded)
+
+Target Variable: Fire risk category (Low / Medium / High) derived from burned area.
 
 Features:
 
