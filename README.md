@@ -2,95 +2,88 @@
 
 A machine learning project that predicts forest fire risk levels (Low, Medium, High) using environmental and weather data from the UCI Forest Fires dataset.
 
+# Forest Fire Risk Prediction
 
-**Project Overview **
-Forest fires are a major environmental concern, and early risk prediction can help prevent damage.
-This project uses a Random Forest Classifier to classify fire risk categories based on features like temperature, humidity, wind, and drought indices.
+Predict forest fire risk levels (**Low / Medium / High**) using weather and drought data.  
+Built with **Python**, **Pandas**, **Scikit-learn**, and **Matplotlib**.
 
-📂 Dataset
+---
 
-Source: UCI Machine Learning Repository
-Features:
-Weather: temperature, wind, humidity, rainfall
+## Overview
 
-Drought indices: DC, DMC, ISI, FFMC
+Forest fires are unpredictable and destructive.  
+This project demonstrates how **machine learning** can classify **fire risk** from environmental conditions.  
+We use the **UCI Forest Fires dataset**, preprocess it, train a **Random Forest Classifier**, evaluate its performance, and visualize the results.
 
-Temporal: month, day (one-hot encoded)
+---
 
-Target Variable: Fire risk category (Low / Medium / High) derived from burned area.
+## Dataset
 
-Features:
+- **Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/forest+fires)  
+- **Features:**
+  - Weather: temperature, wind, humidity, rainfall  
+  - Drought indices: DC, DMC, ISI, FFMC  
+  - Temporal: month, day (one-hot encoded)  
+- **Target variable:** Fire risk category (Low / Medium / High) derived from burned area
 
-Weather: temperature, wind, rain, relative humidity
+---
 
-Drought indices: DC, DMC, ISI, FFMC
+## Approach
 
-Temporal: month, day (one-hot encoded)
+1. **Data Preprocessing**  
+   - One-hot encoding for `month` and `day`  
+   - Converted burned area into risk categories  
 
-Target: Burned area converted into risk levels:
+2. **Model Training**  
+   - Random Forest Classifier  
+   - Train-test split evaluation  
 
-Low (area ≤ 1)
+3. **Evaluation**  
+   - Accuracy, precision, recall, F1-score  
+   - Confusion matrix visualization  
 
-Medium (1 < area ≤ 5)
+4. **Feature Insights**  
+   - Ranked feature importances to identify key predictors  
 
-High (area > 5)
+---
 
-Approach
+## Results
 
-Data Preprocessing
+- **Accuracy:** ~54%  
+- **Class-wise performance:**
+  - Low risk → High recall (0.78)  
+  - Medium / High risk → Lower performance due to class imbalance  
+- **Key features:** temperature, wind, DC, DMC, ISI  
 
-One-hot encoded month and day
+### Visualizations included:
+- Risk distribution plot  
+- Confusion matrix heatmap  
+- Feature importance bar chart  
 
-Mapped burned area into 3 risk categories
+---
 
-Model Training
+## How to Run
 
-Random Forest Classifier
+```bash
+# Clone the repository
+git clone https://github.com/your-username/forest-fire-prediction.git
+cd forest-fire-prediction
 
-Train-test split for evaluation
+# Install dependencies
+pip install -r requirements.txt
 
-Evaluation
+# Run the notebook
+jupyter notebook forest_fire_prediction.ipynb
+```
 
-Accuracy, precision, recall, F1-score
+---
 
-Confusion matrix to visualize predictions
+## Future Improvements
 
-Insights
+- Hyperparameter tuning (GridSearchCV)  
+- Handle class imbalance with SMOTE  
+- Try gradient boosting (XGBoost / LightGBM)  
+- Deploy as an interactive web app (Streamlit / Flask)  
 
-Feature importance ranking to identify key predictors
+---
 
-Results
-
-Accuracy: ~54% on test data
-
-Class Performance:
-
-Low risk: High recall (0.78)
-
-Medium / High risk: Lower performance due to data imbalance
-
-Most Important Features:
-
-Temperature, Wind, DC, DMC, ISI indices
-
-Visualizations Included:
-
-Risk distribution plot
-
-Confusion matrix
-
-Feature importance chart
-
-Future Improvements
-
-Hyperparameter tuning using GridSearchCV
-
-Handle class imbalance with SMOTE or weighted loss
-
-Try advanced models (XGBoost, LightGBM)
-
-Deploy as an interactive web app (Streamlit / Flask)
-
-Author
-
-Your Name – Your GitHub Profile
