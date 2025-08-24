@@ -3,8 +3,7 @@
 A machine learning project that predicts forest fire risk levels (Low, Medium, High) using environmental and weather data from the UCI Forest Fires dataset.
 
 
-Project Overview
-
+**Project Overview **
 Forest fires are a major environmental concern, and early risk prediction can help prevent damage.
 This project uses a Random Forest Classifier to classify fire risk categories based on features like temperature, humidity, wind, and drought indices.
 
